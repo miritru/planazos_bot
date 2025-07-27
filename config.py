@@ -7,8 +7,9 @@ load_dotenv()  # Carga las variables del archivo .env
 TOKEN = os.getenv("TOKEN")
 PLANES_FILE = 'planes.json'
 
+USUARIOS_PERMITIDOS = os.getenv("USUARIOS_PERMITIDOS", "")
+USUARIOS_PERMITIDOS = [u.strip() for u in USUARIOS_PERMITIDOS.split(",") if u.strip()]
+
 # Estados de conversación
 BORRAR_FECHA, BORRAR_ELEGIR = range(2)
 
-# Lista de usuarios permitidos
-USUARIOS_PERMITIDOS = ['mirianconn', 'Mirfraper']
