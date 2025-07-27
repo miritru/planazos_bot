@@ -1,8 +1,14 @@
-BORRAR_FECHA, BORRAR_ELEGIR = range(2)
+import os
+from dotenv import load_dotenv
 
-TOKEN = '7599278607:AAHZegoWRfJogoYyE4sCHIFeL1VlFTEoWaI'
+load_dotenv()  # Carga las variables del archivo .env
 
+# Variables
+TOKEN = os.getenv("TOKEN")
 PLANES_FILE = 'planes.json'
 
-# Lista de usernames permitidos (sin @)
+# Estados de conversación
+BORRAR_FECHA, BORRAR_ELEGIR = range(2)
+
+# Lista de usuarios permitidos
 USUARIOS_PERMITIDOS = ['mirianconn', 'Mirfraper']
